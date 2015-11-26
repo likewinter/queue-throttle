@@ -1,0 +1,24 @@
+{
+    "name": "likewinter/queue-throttle",
+    "description": "Laravel Beanstalkd Queue Throttle",
+    "keywords": ["laravel", "lumen", "queue", "redis", "beanstalkd", "throttle"],
+    "require": {
+        "predis/predis": "^1.0",
+        "pda/pheanstalk": "^3.1",
+        "illuminate/queue": "^5.1",
+        "illuminate/support": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Likewinter\\QueueThrottle\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Orlov",
+            "email": "anton@pinked.ru"
+        }
+    ],
+    "minimum-stability": "dev"
+}
