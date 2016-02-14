@@ -19,7 +19,7 @@ $app->register(Likewinter\QueueThrottle\QueueThrottleServiceProvider::class);
 ```
 
 ## Using:
-Inside your Job add something like this
+Inside your Job class add trait and set limits
 ```php
 use CanLimitRate;
 
@@ -28,7 +28,7 @@ protected $rateLimits = [
     ['requests' => 15, 'seconds' => 30],
 ];
 ```
-and in the start of ```handle()``` method
+and at the begining of ```handle()``` method
 ```php
 $this->throttle();
 ```
