@@ -2,7 +2,7 @@
 
 ## Installing
 
-### Laravel:
+### Laravel
 Register service provider by adding in ```config/app.php```
 ```php
 'providers' => [
@@ -18,7 +18,7 @@ Register service provider by adding in ```bootstrap/app.php```
 $app->register(Likewinter\QueueThrottle\QueueThrottleServiceProvider::class);
 ```
 
-## Using:
+## Using
 Inside your Job class add trait and set limits
 ```php
 use CanLimitRate;
@@ -28,7 +28,7 @@ protected $rateLimits = [
     ['requests' => 15, 'seconds' => 30],
 ];
 ```
-and at the begining of ```handle()``` method
+At the begining of ```handle()``` method use throttle
 ```php
 $this->throttle();
 ```
