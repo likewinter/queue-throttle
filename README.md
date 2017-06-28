@@ -18,6 +18,13 @@ Register service provider by adding in ```bootstrap/app.php```
 $app->register(Likewinter\QueueThrottle\QueueThrottleServiceProvider::class);
 ```
 
+## Settings
+You can set Redis and Beanstalkd hosts in your .env file like
+```
+BEANSTALKD_HOST=beanstalkd
+REDIS_HOST=redis
+```
+
 ## Using
 Inside your Job class add trait and set limits
 ```php

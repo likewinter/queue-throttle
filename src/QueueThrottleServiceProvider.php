@@ -14,7 +14,13 @@ class QueueThrottleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Likewinter\QueueThrottle\Throttle', function () {
-            return new Throttle(new RedisClient, new Pheanstalk('127.0.0.1'));
+            $redisHost = 'tcp://' . env('REDIS_HOST', '127.0.0.1') . ':6379';
+            $beanstalkdHost = env('BEANSTALKD_HOST', '127.0.0.1');
+
+            return new Throttle(
+                new RedisClient($redisHost),
+                new Pheanstalk($beanstalkdHost)
+            );
         });
     }
 }
