@@ -1,3 +1,5 @@
+# DEPRECATED: use a built-in queue agnostic [implementation](https://github.com/likewinter/queue-throttle/issues/3#issuecomment-522147816) throttle mechanism from Laravel Framework
+
 # Laravel beanstalkd queue throttle
 
 ## Installing
